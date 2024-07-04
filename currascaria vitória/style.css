@@ -1,9 +1,9 @@
 body{
 
-    width: calc(100% - 3px);
+    width: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    margin: 3px;
     margin-top: 5px;
     gap: 3px;
 
@@ -17,8 +17,9 @@ header{
     justify-content: center;
     gap: 11px;
     padding: 6px;
-
-    > div.title-container{
+    margin-bottom: 2%;
+    
+    > .title-container{
 
         display: flex;
         flex-direction: column;
@@ -26,7 +27,7 @@ header{
         text-align: center;
         height: 115px;
 
-        > label.title{
+        > .title{
 
             font-family: "Algerian";
             color: red;
@@ -36,10 +37,10 @@ header{
 
     }
 
-    > div.links-container{
+    > .links-container{
 
         display: flex;
-        background-color: rgb(179, 81, 81);
+        background-color: rgb(196, 64, 64);
         height: 60px;
         border-radius: 8.5px;
         justify-content: space-evenly;
@@ -65,30 +66,84 @@ header{
 
 main{
 
-    width: calc(100% - 7px);
-    margin-left: 7px;
+    width: calc(100% - 5%);
+    margin-right: 0.8%;
+    margin-left: 1%;
+    gap: 5%;
     display: flex;
     flex-direction: column;
 
-    > label.sub-title{
+}
 
-        font-family: "Algerian";
-        color: red;
-        font-size: 38px;
-    
-    }
+.sub-title{
 
-    > p.normal-text{
-
-        font-size: 21px;
-
-    }
+    font-family: "Algerian";
+    color: red;
+    margin-top: 0.8%;
+    font-size: 38px;
 
 }
 
-div#container{
+.normal-text{
+
+    font-size: 17px;
+
+}
+
+.normal-button{
+
+    padding: 12px 15px;
+    background-color: rgb(196, 64, 64);
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+
+}
+
+.container{
 
     display: flex;
+    justify-content: space-between;
+
+}
+
+.sub-container{
+
+    display: flex;
+    gap: 5%;
+    align-items: center;
+
+}
+
+.sub-container.center{
+
+    justify-content: center;
+
+}
+
+.sub-container.flex-column{
+
+    flex-direction: column;
+
+}
+
+.sub-container.align-center{
+
+    text-align: center;
+
+}
+
+.img-container{
+
+    display: flex;
+
+    .normal-img{
+
+        height: 250px;
+        width: 300px;
+        border-radius: 15px;
+
+    }
 
 }
 
@@ -102,7 +157,7 @@ div#container{
         justify-content: center;
         padding: 5.5px;
     
-        > div.title-container{
+        > .title-container{
     
             display: flex;
             flex-direction: column;
@@ -110,7 +165,7 @@ div#container{
             text-align: center;
             height: 105px;
 
-            > label.title{
+            > .title{
     
                 font-family: "Algerian";
                 color: red;
@@ -120,7 +175,7 @@ div#container{
     
         }
     
-        > div.links-container{
+        > .links-container{
     
             display: flex;
             background-color: rgb(179, 81, 81);
@@ -152,20 +207,20 @@ div#container{
 
         margin-left: 6.5px;
     
-        > label.sub-title{
-    
-            font-family: "Algerian";
-            color: red;
-            font-size: 34.6px;
-        
-        }
+    }
 
-        > p.normal-text{
+    .sub-title{
+    
+        font-family: "Algerian";
+        color: red;
+        font-size: 34.6px;
+    
+    }
 
-            font-size: 19.7px;
-    
-        }
-    
+    .normal-text{
+
+        font-size: 18.3px;
+
     }
 
 }
@@ -180,7 +235,7 @@ div#container{
         gap: 10.3px;
         padding: 5px;
     
-        > div.title-container{
+        > .title-container{
     
             display: flex;
             flex-direction: column;
@@ -188,7 +243,7 @@ div#container{
             text-align: center;
             height: 88px;
 
-            > label.title{
+            > .title{
     
                 font-family: "Algerian";
                 color: red;
@@ -198,7 +253,7 @@ div#container{
     
         }
     
-        > div.links-container{
+        > .links-container{
     
             display: flex;
             background-color: rgb(179, 81, 81);
@@ -229,20 +284,20 @@ div#container{
 
         margin-left: 5.8px;
     
-        > label.sub-title{
-    
-            font-family: "Algerian";
-            color: red;
-            font-size: 29.8px;
-        
-        }
+    }
 
-        > p.normal-text{
+    .sub-title{
+    
+        font-family: "Algerian";
+        color: red;
+        font-size: 29.8px;
+    
+    }
 
-            font-size: 18.5px;
-    
-        }
-    
+    .normal-text{
+
+        font-size: 17.3px;
+
     }
 
 }
@@ -258,7 +313,7 @@ div#container{
         gap: 9.7px;
         padding: 4.4px;
     
-        > div.title-container{
+        > .title-container{
     
             display: flex;
             flex-direction: column;
@@ -266,7 +321,7 @@ div#container{
             text-align: center;
             height: 82.2px;
 
-            > label.title{
+            > .title{
     
                 font-family: "Algerian";
                 color: red;
@@ -276,7 +331,7 @@ div#container{
     
         }
     
-        > div.links-container{
+        > .links-container{
     
             display: flex;
             background-color: rgb(179, 81, 81);
@@ -307,20 +362,20 @@ div#container{
 
         margin-left: 5.1px;
     
-        > label.sub-title{
-    
-            font-family: "Algerian";
-            color: red;
-            font-size: 27.6px;
-        
-        }
+    }
 
-        > p.normal-text{
+    .sub-title{
+    
+        font-family: "Algerian";
+        color: red;
+        font-size: 27.6px;
+    
+    }
 
-            font-size: 16.9px;
-    
-        }
-    
+    .normal-text{
+
+        font-size: 16px;
+
     }
 
 }
@@ -336,7 +391,7 @@ div#container{
         gap: 9.3px;
         padding: 3.3px;
     
-        > div.title-container{
+        > .title-container{
     
             display: flex;
             flex-direction: column;
@@ -344,7 +399,7 @@ div#container{
             text-align: center;
             height: 75.7px;
 
-            > label.title{
+            > .title{
     
                 font-family: "Algerian";
                 color: red;
@@ -354,7 +409,7 @@ div#container{
     
         }
     
-        > div.links-container{
+        > .links-container{
     
             display: flex;
             background-color: rgb(179, 81, 81);
@@ -385,20 +440,21 @@ div#container{
 
         margin-left: 5.1px;
     
-        > label.sub-title{
-    
-            font-family: "Algerian";
-            color: red;
-            font-size: 22px;
-        
-        }
+    }
 
-        > p.normal-text{
 
-            font-size: 16px;
+    .sub-title{
     
-        }
+        font-family: "Algerian";
+        color: red;
+        font-size: 22px;
     
+    }
+
+    .normal-text{
+
+        font-size: 15.5px;
+
     }
 
 }

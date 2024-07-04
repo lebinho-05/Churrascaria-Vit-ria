@@ -1,21 +1,29 @@
-salutation = document.getElementById("salutation")
+// helpers
 
-const currentHour = (new Date()).getHours();
+function updateGreeting() {
 
-var greeting;
+    salutation = document.getElementById("salutation")
 
-if (currentHour >= 5 && currentHour < 12) {
-
-  greeting = "Bom Dia!";
-
-} else if (currentHour >= 12 && currentHour < 18) {
-
-  greeting = "Boa Tarde!";
-
-} else {
-
-  greeting = "Boa Noite!";
-
+    const currentHour = (new Date()).getHours();
+  
+    var greeting;
+    
+    if (currentHour >= 5 && currentHour < 12) {
+  
+      greeting = "Bom Dia!";
+  
+    } else if (currentHour >= 12 && currentHour < 18) {
+  
+      greeting = "Boa Tarde!";
+  
+    } else {
+  
+      greeting = "Boa Noite!";
+  
+    }
+  
+    salutation.textContent = greeting
+  
 }
 
-salutation.textContent = greeting
+updateGreeting()
