@@ -1,0 +1,266 @@
+@import url("../fonts/Algerian/style/Algerian.css");
+@import url("vars.css");
+
+@media all {
+ 
+    body {
+
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: -0.1vh;
+        gap: 0.5vh;
+    
+    }
+    
+    header {
+    
+        width: calc(100% - 12px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 11px;
+        padding: 6px;
+        
+        > .title-container {
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            height: 115px;
+    
+            > .title {
+    
+                font-family: var(--title-font), var(--alternative-title-font);
+                color: var(--title-color);
+                font-size: 4.8vh;
+            
+            }
+    
+        }
+    
+        > .links-container {
+    
+            display: flex;
+            background-color: var(--std-color);
+            height: 7vh;
+            border-radius: 8.5px;
+            justify-content: space-evenly;
+            align-items: center;
+    
+            > a {
+    
+                color: white;
+                text-decoration: none;
+                font-size: 2.2vh;
+                padding: 5px;
+                font-family: "Calibri Corp";
+    
+            }
+    
+            > a:hover {
+    
+                text-decoration: underline;
+                font-style: italic;
+    
+            }
+    
+        }
+    
+    }
+    
+    main {
+    
+        width: calc(100% - 5%);
+        margin-right: 0.8%;
+        margin-left: 1%;
+        gap: 5%;
+        display: flex;
+        flex-direction: column;
+    
+        .sub-title {
+    
+            font-family: var(--title-font), var(--alternative-title-font);
+            color: var(--title-color);
+            margin-top: 0.8%;
+            font-size: 4vh;
+        
+        }
+    
+        .tiny-title {
+    
+            color: var(--title-color);
+            font-family: var(--title-font), var(--alternative-title-font);
+            font-size: 3.3vh;
+    
+        }
+        
+        .normal-img {
+    
+            height: 25vh;
+            width: 37vh;
+            border-radius: 15px;
+            cursor: pointer;
+    
+        }
+    
+        .normal-text {
+    
+            font-size: 1.9vh;
+            font-family: "Arial";
+        
+        }
+    
+        .normal-button {
+    
+            padding: 12px 17px;
+            background-color: var(--std-color);
+            text-decoration: none;
+            color: white;
+            border-radius: 6px;
+            transition: 0.2s;
+            border: none;
+    
+            .button-text {
+    
+                display: flex;  
+                font-family: "Arial";
+                gap: 1vh;
+                font-size: 2.1vh;
+        
+            }
+        
+        }
+        
+        .normal-button:hover {
+        
+            background-color: rgb(155, 60, 60);
+            padding: 12px 20px;
+            font-style: italic;
+        
+        }
+    
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    header {
+
+        .title-container {
+
+            .title {
+
+                font-size: 4.6vh;
+
+            }
+            
+        }
+
+    }
+    
+}
+
+@media (max-width: 750px) {
+    
+    body {
+
+        margin-top: 2.5vh;
+
+    }
+
+    header {
+
+        .title-container {
+
+            margin-bottom: 1vh;
+
+            .title {
+
+                font-size: 4.2vh;
+
+            }
+            
+        }
+
+        .links-container {
+
+            > a {
+
+                font-size: 2vh;
+
+            }
+
+        }
+
+    }
+
+    main {
+
+        .normal-text {
+
+            font-size: 1.8vh;
+
+        }
+
+    }
+
+}
+
+@media (max-width: 615px) {
+    
+    header {
+
+        .links-container {
+
+            .hypertext {
+
+                display: none;
+
+            }
+
+            .to-home {
+
+                font-size: 3vh;
+                display: block;
+
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 550px) {
+    
+    main {
+
+        .normal-img {
+
+            height: 200px;
+            width: 268px;
+
+        }
+
+    }
+
+}
+
+@media (max-width: 395px) {
+    
+    main {
+
+        .normal-img {
+
+            height: 195px;
+            width: 250px;
+
+        }
+
+    }
+
+}

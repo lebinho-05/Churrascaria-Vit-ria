@@ -2,9 +2,7 @@
 
 "use strict"
 
-const currentHour = (new Date()).getHours();
-
-function updateGreeting() {
+function updateGreeting(currentHour) {
 
   let salutation = document.getElementById("salutation")
 
@@ -29,7 +27,7 @@ function updateGreeting() {
 }
 
 
-function updateMeal() {
+function updateMeal(currentHour) {
 
   let meal = document.getElementById("meal")
   
@@ -37,15 +35,15 @@ function updateMeal() {
 
   if (currentHour >= 1 && currentHour < 11) {
 
-    snack = "COMA";
+    snack = "Coma";
 
   } else if (currentHour >= 11 && currentHour <= 14) {
 
-    snack = "ALMOCE";
+    snack = "Almoce";
 
   } else {
 
-    snack = "JANTE";
+    snack = "Jante";
 
   }
 
@@ -55,7 +53,9 @@ function updateMeal() {
 
 setInterval(() => {
 
-  updateGreeting()
-  updateMeal()
+  let currentHour = (new Date()).getHours();
+
+  updateGreeting(currentHour)
+  updateMeal(currentHour)
   
 }, 1000)

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça Sua reserva</title>
+    <link rel="stylesheet" href="../styles/reserve.css">
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js" integrity="sha512-UNbeFrHORGTzMn3HTt00fvdojBYHLPxJbLChmtoyDwB6P9hX5mah3kMKm0HHNx/EvSPJt14b+SlD8xhuZ4w9Lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    -->
+    
+</head>
+<body>
+    
+    <header>
+
+        <div class="title-container">
+            
+            <label class="title">Faça Sua Reserva</label>
+
+        </div>
+
+        <nav class="links-container">
+
+            <a href="../../index.html" class="to-home">Página Principal</a>
+
+            <a href="sobre-nos.html" class="hypertext">Sobre Nós</a>
+
+            <a href="nossos-servicos.html" class="hypertext">Nossos Serviços</a>
+
+            <a href="vitoria.html" class="hypertext">Fale com a Vitória</a>
+
+            <a href="nosso-ambiente.html" class="hypertext">Nosso Ambiente</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="sub-container align-center tiny-text">
+
+            <label class="italic">*Reservas defem ser feitas com, no mínimo, 3 horas de antecedencia</label>
+
+            <label class="italic">*Aniversariante acompanhado de 8 ou mais pessoas não paga</label>
+
+        </div>
+        
+        <form action="../../index.html" method="get">
+
+            <div class="container center std-gap">
+
+                <div class="sub-container center flex-column">
+
+                    <label for="name" class="normal-text">Nome</label>
+                    <input type="text" name="name" id="name" class="form-input" required>
+
+                </div>
+
+                <div class="sub-container center flex-column">
+
+                    <label for="tel" class="normal-text">Telefone (ddd)</label>
+                    <input type="tel" name="tel" id="tel" class="form-input" required>
+
+                </div>
+
+            </div>
+
+            <div class="container center std-gap">
+
+                <div class="sub-container center flex-column">
+
+                    <label for="e-mail" class="normal-text">E-Mail</label>
+                    <input type="email" name="e-mail" id="e-mail" class="form-input" required>
+
+                </div>
+
+                <div class="sub-container center flex-column">
+
+                    <label for="number" class="normal-text">Nº de Pessoas</label>
+                    <input type="number" name="number" id="number" min="2" max="25" class="form-input" required>
+
+                </div>
+
+            </div>
+
+            <div class="container center std-gap">
+
+                <div class="sub-container center flex-column">
+
+                    <label for="date" class="normal-text">Data</label>
+                    <input type="date" name="date" id="date" class="form-input" required>
+
+                </div>
+
+                <div class="sub-container center flex-column">
+
+                    <label for="time" class="normal-text">Horário</label>
+                    <input type="time" name="time" id="time" class="form-input" required>
+
+                </div>
+
+            </div>
+
+            <div class="container center std-gap">
+
+                <div class="sub-container center flex-column">
+
+                    <label for="service" class="normal-text">Serviço</label>
+
+                    <select id="service" name="service" class="form-input" required>
+
+                        <option value="">---</option>
+                        <option>Buffet</option>
+                        <option>Mini Rodízio</option>
+
+                    </select>
+
+                </div>
+
+                <div class="sub-container center flex-column">
+
+                    <label for="reason" class="normal-text">Motivo</label>
+
+                    <select id="reason" name="reason" class="form-input" required>
+
+                        <option value="">---</option>
+                        <option>Aniversário</option>
+                        <option>Formatura</option>
+                        <option>Outro</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="sub-container align-center flex-column std-gap">
+
+                <label for="observations" class="normal-text">Observações</label>
+                <textarea name="observations" id="observations"  maxlength="500"></textarea>
+
+            </div>
+
+            <div class="sub-container center">
+
+                <button id="reserve" type="submit" class="normal-button"><label class="button-text">Reservar</label></button>
+                <button type="reset" class="normal-button"><label class="button-text">Limpar</label></button>
+                
+            </div>
+
+        </form>
+    </main>
+
+    <script src="../system/reserve.js"></script>
+
+</body>
+</html>
