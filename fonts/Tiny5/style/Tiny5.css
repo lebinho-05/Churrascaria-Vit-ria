@@ -1,0 +1,12 @@
+@font-face {
+
+    font-family: "Tiny5";
+
+    src:
+    url("../font/Tiny5.ttf") format("truetype"),
+    url("../font/Tiny5.otf") format("opentype");
+    
+    font-weight: normal;
+    font-style: normal;
+
+}

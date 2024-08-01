@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+@import url("../fonts/Algerian/style/Algerian.css");
+@import url("configs.less");
+
+@media all {
+ 
+    body {
+
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -.1vh;
+        touch-action: pan-y;
+        gap: 3vh;
+    
+    }
+    
+    header {
+    
+        width: calc(100% - 12px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 11px;
+        padding: 6px;
+        
+        > .title-container {
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            height: 115px;
+            margin: 2vh 0;
+            position: relative;
+    
+        }
+    
+        > .links-container {
+    
+            display: flex;
+            background-color: @nav-color;
+            height: @nav-height;
+            border-radius: @nav-border-radius;
+            justify-content: space-evenly;
+            align-items: center;
+    
+            > a {
+    
+                color: @nav-link-color;
+                text-decoration: none;
+                font-size: @nav-link-size;
+                padding: 5px;
+                font-family: @nav-link-font, @alternative-nav-link-font;
+
+                &:hover { .nav-link-hover(); }
+
+                &::selection, > label::selection { .nav-link-selection(); }
+    
+            }
+    
+        }
+    
+    }
+    
+    main {
+    
+        width: calc(100% - 5%);
+        margin-right: 0.8%;
+        margin-left: 1%;
+        gap: 5%;
+        display: flex;
+        flex-direction: column;
+        
+        .normal-img {
+    
+            height: @normal-img-height;
+            width: @normal-img-width;
+            border-radius: @normal-img-border-radius;
+            cursor: pointer;
+
+            &::selection { .img-selection(); }
+    
+        }
+    
+        .normal-text {
+    
+            font-size: @normal-text-size;
+            font-family: @normal-text-font, @alternative-normal-text-font;
+
+            &::selection { .normal-text-selection(); }
+        
+        }
+    
+        .normal-button {
+            
+            padding: @button-vertical-padding @button-horizontal-padding;
+            background-color: @button-color;
+            text-decoration: none;
+            color: @button-text-color;
+            border-radius: @button-border-radius;
+            transition: 0.2s;
+            border: none;
+
+            &:hover {
+
+                padding: @button-hover-vertical-padding @button-hover-horizontal-padding;
+
+                .button-text { .button-text-hover(); }
+            
+            }
+    
+            .button-text {
+
+                display: flex;  
+                font-family: @button-text-font, @alternative-button-font;
+                gap: 1vh;
+                font-size: @button-text-size;
+
+                &::selection { .button-text-selection(); }
+        
+            }
+        
+        }
+
+        a { color: @links-color; }
+    
+    }
+
+}
+
+@media (@2-media) {
+    
+    body {
+
+        margin-top: 2.5vh;
+
+    }
+
+    header {
+
+        .title-container {
+
+            margin-bottom: 1vh;
+            
+        }
+
+        .links-container {
+
+            > a {
+
+                font-size: (@nav-link-size - @nav-link-size-variation);
+
+            }
+
+        }
+
+    }
+
+    main {
+
+        .normal-text {
+
+            font-size: (@normal-text-size - @normal-text-size-variation);
+
+        }
+
+    }
+
+}
+
+@media (@4-media) {
+    
+    main {
+
+        .normal-img {
+
+            height: (@normal-img-height - @normal-img-heigth-variation);
+            width: (@normal-img-width - @normal-img-width-variation);
+
+        }
+
+    }
+
+}
+
+@media (@5-media) {
+    
+    main {
+
+        .normal-img {
+
+            height: (@normal-img-height - (@normal-img-heigth-variation * 2));
+            width: (@normal-img-width - (@normal-img-width-variation * 2));
+
+        }
+
+    }
+
+}
+
+@media (@nav-link-responsiveness-media) {
+    
+    header {
+
+        .links-container {
+
+            .hypertext {
+
+                display: none;
+
+            }
+
+            .to-home {
+
+                font-size: (@nav-link-size * 1.2);
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,309 @@
+// charset
+
+    @charset "UTF-8";
+
+// std configs
+
+    // color
+
+        @std-color: red;
+        @std-bg-color: hsl(hue(@std-color), (saturation(@std-color) - 45%), (lightness(@std-color) - 2%));
+    
+    // font-family
+
+        @std-font: "Arial";
+        @alternative-std-font: "Helvetica";
+    
+    // ::selection - "*::selection"
+
+        .std-selection(@bg-color: hsla(240, 96%, 55%, 0.8)) {
+
+            background-color: @bg-color;
+            color: @title-color;
+
+        }
+
+        .no-selection(@color, @opacity: .3) {
+
+            color: @color;
+            background-color: hsla(240, 100%, 70%, @opacity);
+
+        }
+
+
+
+//  responsiveness
+
+    // media queries
+
+        // for laptops
+        @1-media: ~"max-width: 1030px";
+
+        // for tablets
+        @2-media: ~"max-width: 780px";
+
+        // for normal cell phones
+        @4-media: ~"max-width: 550px";
+
+        // for very small cell phones
+        @5-media: ~"max-width: 363px";
+    
+    // container
+
+        @container-responsiveness-media: ~"max-width: 920px";
+
+        .container-res() {
+
+            flex-direction: column;
+            align-items: center;
+
+        }
+    
+    // nav links - ".links-container > a"
+
+        @nav-link-responsiveness-media: ~"max-width: 630px";
+
+
+
+// nav bar - ".links-container"
+
+    // color
+
+        @nav-color: @std-bg-color;
+    
+    // size
+
+        @nav-height: 10vh;
+
+    // border-radius
+
+        @nav-border-radius: 1.5vh;
+
+
+
+// nav links - ".links-container > a"
+
+    // color
+
+        @nav-link-color: white;
+    
+    // font-family
+
+        @nav-link-font: "Calibri Corp";
+        @alternative-nav-link-font: @alternative-std-font;
+    
+    // size
+
+        // font-size
+
+            @nav-link-size: (@normal-text-size * 1.1);
+
+        // size variation
+
+            @nav-link-size-variation: (@normal-text-size-variation * 2);
+
+    
+    // :hover - "a:hover"
+
+        // text-decoration
+
+            @nav-link-hover-text-decoration: underline;
+        
+        // font-style
+
+            @nav-link-hover-font-style: italic;
+        
+        // don´t modify
+
+            .nav-link-hover() {
+
+                text-decoration: @nav-link-hover-text-decoration;
+                font-style: @nav-link-hover-font-style;
+
+            }
+
+    
+    // ::selection - "a::selection"
+
+        .nav-link-selection() { .no-selection(@nav-link-color); }
+
+
+
+// title - ".title", ".sub-title", ".tiny-title"
+
+    // color
+
+        @title-color: @std-color;
+
+    // font-family
+
+        @title-font: "Algerian";
+        @alternative-title-font: "Sans Serif";
+
+    // size
+
+        // font-size
+
+            @title-size: 4.8vh;
+            @sub-title-size: (@title-size - (@title-size-variation * 2));
+            @tiny-title-size: (@sub-title-size - (@title-size-variation * 3));
+        
+        // size variation
+
+            @title-size-variation: .2vh;
+
+            // the classes ".sub-title" and ".tiny-title" not have size variation
+
+    
+    // ::selection - ".title::selection", ".sub-title::selection", ".tiny-title::selection"
+
+        .title-selection() { .no-selection(@title-color) }
+
+
+
+// text - ".normal-text", ".tiny-text"
+
+    // ".normal-text"
+
+        // font-family
+
+            @normal-text-font: @std-font;
+            @alternative-normal-text-font: @alternative-std-font;
+        
+        // size
+
+            // font-size
+
+                @normal-text-size: 2vh;
+            
+            // size variation
+
+                @normal-text-size-variation: 0.11vh;
+
+        
+        // ::selection - ".normal-text::selection"
+
+            .normal-text-selection() { .std-selection(); }
+
+    
+    // ".tiny-text"
+
+        // font-family
+
+            @tiny-text-font: @std-font;
+            @alternative-tiny-text-font: @alternative-std-font;
+        
+        // size
+
+            // font-size
+
+                @tiny-text-size: (@normal-text-size / ((@normal-text-size-variation * 12) - 0.2vh));
+            
+            // size variation
+
+                // the class ".tiny-text" not have size variation
+
+        
+        // ::selection - ".tiny-text::selection"
+
+            .tiny-text-selection() { .std-selection(); }
+
+
+    // links - "a"
+
+        // color
+
+            @links-color: @std-color;
+
+
+
+// image - ".normal-img"
+
+    // border-radius
+
+        @normal-img-border-radius: 2.3vh;
+
+    // size
+
+        // width and heigth
+
+            @normal-img-width: 37vh;
+            @normal-img-height: 25vh;
+        
+        // size variation
+
+            @normal-img-width-variation: 1.5vh;
+            @normal-img-heigth-variation: 0.5vh;
+
+    
+    // ::selection - ".normal-img::selection"
+
+        .img-selection() { .no-selection(transparent, .2) }
+
+
+
+// button - ".normal-button"
+
+    // color
+
+        @button-color: @std-bg-color;
+
+    // border-radius
+
+        @button-border-radius: 0.8vh;
+
+    // button text - ".button-text"
+
+        // color
+
+            @button-text-color: white;
+
+        // font-family
+
+            @button-text-font: @std-font;
+            @alternative-button-font: @alternative-std-font;
+
+        // size
+
+            // font-size
+
+                @button-text-size: (@normal-text-size * 1.1);
+            
+            // size variation
+
+                // the class ".button-text" not have size variation
+
+    // padding
+
+        @button-vertical-padding: 12px;
+        @button-horizontal-padding: 17px;
+
+    // :hover - ".normal-button:hover"
+
+        // pading
+
+            @button-hover-vertical-padding: @button-vertical-padding;
+            @button-hover-horizontal-padding: 20px;
+        
+        // button text - ".normal-button:hover > .button-text"
+
+            // text-decoration
+
+                @button-hover-text-decoration: underline;
+            
+            // font-style
+
+                @button-hover-text-style: italic;
+            
+            // don't modify
+
+                .button-text-hover() {
+
+                    font-style: @button-hover-text-style;
+                    text-decoration: @button-hover-text-decoration;
+
+                }
+    
+    // ::sellection - ".button-text::selection"
+
+        .button-text-selection() { .no-selection(@button-text-color); }

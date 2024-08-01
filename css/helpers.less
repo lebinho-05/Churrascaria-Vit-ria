@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+@import url("configs.less");
+
+@media all {
+
+    .flex() {
+
+        display: flex;
+
+    }
+
+    #mini-caster-cuts {
+
+        position: relative;
+        .center() {
+            
+            @media (min-width: 1000px) { left: 45px; }
+            @media (@2-media) { left: 30px; }
+            @media (@4-media) { left: 25px; }
+             
+        }
+        .center();
+
+    }
+
+    .title {
+
+        font-family: @title-font, @alternative-title-font;
+        color: @title-color;
+        font-size: @title-size;
+
+        &.sub-title {
+    
+            margin-top: 0.8%;
+            font-size: @sub-title-size;
+        
+        }
+    
+        &.tiny-title {
+    
+            font-size: @tiny-title-size;
+    
+        }
+
+        &.after-bar::after{
+
+            content: '';
+            height: 10px;
+            width: 50px;
+            background-color: red;
+
+        }
+
+        &::selection { .title-selection(); }
+
+    }
+
+    .container {
+
+        .flex();
+        gap: 1vh;
+    
+    }
+
+    .margin-top {
+
+        margin-top: 0.7vh;
+
+    }
+    
+    .sub-container {
+    
+        .flex();
+        gap: 10px;
+        margin-bottom: 10px;
+    
+    }
+
+    .std-width {
+
+        width: 45vh;
+
+    }
+    
+    .total-width {
+    
+        width: 100%;
+    
+    }
+    
+    .normal-text.center {
+    
+        text-align: center;
+    
+    }
+    
+    .center {
+    
+        justify-content: center;
+    
+    }
+
+    .tiny-text {
+    
+        margin-bottom: 2vh;
+        font-size: @tiny-text-size;
+        font-family: @tiny-text-font, @alternative-tiny-text-font;
+        .flex();
+        flex-direction: column;
+        gap: 1vh;
+
+        > label::selection { .tiny-text-selection(); }
+    
+    }
+    
+    .italic {
+    
+        font-style: italic;
+    
+    }
+    
+    .flex-column {
+    
+        flex-direction: column;
+    
+    }
+    
+    .std-gap {
+    
+        gap: 3vh;
+    
+    }
+    
+    .align-center {
+    
+        align-items: center;
+    
+    }
+
+}
+
+@media (@1-media) {
+
+    .title {
+
+        font-size: (@title-size - @title-size-variation);
+
+    }
+
+}
+
+@media (@2-media) {
+
+    .title {
+
+        font-size: (@title-size - (@title-size-variation * 2.5));
+
+    }
+
+}
+
+@media (@container-responsiveness-media) {
+
+    .container {
+        
+        .container-res();
+    
+    }
+
+}
